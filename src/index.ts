@@ -1,16 +1,11 @@
-interface Colors {
-  R: number;
-  G: number;
-  B: number;
-}
+export * from './errors/bad-request-error';
+export * from './errors/custom-errors';
+export * from './errors/database-connection-error';
+export * from './errors/not-authorized-error';
+export * from './errors/not-found-error';
+export * from './errors/request-validation-error';
 
-const color: Colors = {
-  R: 100,
-  G: 12,
-  B: 23,
-};
-
-console.log(color);
-
-//to use this in other files
-export default color;
+export * from './middlewares/current-user';
+export * from './middlewares/error-handler';
+export * from './middlewares/require-auth';
+export * from './middlewares/validate-request';
