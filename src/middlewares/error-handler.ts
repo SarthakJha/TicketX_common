@@ -21,7 +21,9 @@ export const errorHandler = (
 
     res.status(err.statusCode).send({ errors: err.serializeError() });
   }
-
+  // for better debugging in case of unexpected error
+  console.error(err);
+  //this error is for when an unexpected error takes place
   res.status(500).send({
     errors: {
       message: 'exception faced',

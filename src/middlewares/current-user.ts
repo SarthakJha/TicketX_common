@@ -1,3 +1,9 @@
+/** CURRENT-USER workflow:-
+ * it sets and check is req.currentUser property exists for a request
+ * (has user jwt inside)
+ * and then sends to the next middleware(weather or not re.currentUser exist)
+ */
+
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
@@ -29,6 +35,7 @@ export const currentUser = (
       req.session.jwt,
       process.env.JWT_KEY!
     ) as UserPayload;
+
     /**
      * cant do directly req.currentUser = payload
      * so to solve this, we type cast in interface
