@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run : npm i -g npm-cli-login
       - run: npm install
       - run: npm run build
-      - run: npm version patch
-#       - run: npm publish
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
