@@ -3,7 +3,7 @@ import { CustomErrors } from './custom-errors';
 export class BadRequestError extends CustomErrors {
   /**
    * since we are ext an abstract class, implementing <serializeError()> and
-   * <statusCode> is important
+   * <statusCode> is important {}
    * serializeError in abstract class shoul return
    * '{ message: string | any; field?: string }[]'
    * else it will show an error
