@@ -1,5 +1,5 @@
 # Common Library
-![release-common](https://github.com/SarthakJha/TicketX_common/workflows/release/badge.svg)
+![release](https://github.com/SarthakJha/TicketX_common/workflows/release-common/badge.svg)
 
 
 TicketX_Common is a **npm** library written in typescript for packaging common code among all the services in [TicketX](https://github.com/SarthakJha/TicketX) to avoid repetion of code as much as possible. To install, use:
